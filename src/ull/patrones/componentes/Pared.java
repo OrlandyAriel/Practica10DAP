@@ -8,7 +8,7 @@ public class Pared implements LugarDelMapa
 	@Override
 	public void Entrar()
 	{
-
+		System.out.println("no puedes pasar");
 	}
 
 }
