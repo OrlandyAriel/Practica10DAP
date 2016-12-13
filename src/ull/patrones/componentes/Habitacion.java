@@ -78,7 +78,6 @@ public class Habitacion implements LugarDelMapa
 	@Override
 	public void Entrar()
 	{
-		// TODO Auto-generated method stub
 		
 	}
 }

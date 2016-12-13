@@ -19,11 +19,19 @@ public class Puerta implements LugarDelMapa
 	}
 	public final Habitacion otroLadoDe(Habitacion habitacion)
 	{
-		return habitacion2;
+		if(habitacion.equals(habitacion1))
+			return habitacion2;
+		else if(habitacion.equals(habitacion2))
+			return habitacion1;
+		return null;
 	}
 
 	@Override
 	public void Entrar()
 	{
+		if(estaAbierta)
+			System.out.println("Cambio de habitacion");
+		else
+			System.err.println("No puedes pasar, puerta cerrada");
 	}
 }
