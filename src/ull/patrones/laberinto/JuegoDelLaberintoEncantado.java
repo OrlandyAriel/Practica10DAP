@@ -1,6 +1,8 @@
 package ull.patrones.laberinto;
 
 import ull.patrones.componentes.Habitacion;
+import ull.patrones.componentes.HabitacionEncantada;
+import ull.patrones.componentes.Hechizo;
 import ull.patrones.componentes.Puerta;
 
 public class JuegoDelLaberintoEncantado extends JuegoDelLaberinto

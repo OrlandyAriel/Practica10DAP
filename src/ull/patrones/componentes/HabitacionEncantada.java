@@ -1,6 +1,4 @@
-package ull.patrones.laberinto;
-
-import ull.patrones.componentes.Habitacion;
+package ull.patrones.componentes;
 
 public class HabitacionEncantada extends Habitacion
 {

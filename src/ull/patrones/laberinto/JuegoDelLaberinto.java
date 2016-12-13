@@ -37,7 +37,6 @@ public class JuegoDelLaberinto
 				pared.Entrar();
 			}
 		}
-			
 	}
 	public final Laberinto crearLaberinto()
 	{

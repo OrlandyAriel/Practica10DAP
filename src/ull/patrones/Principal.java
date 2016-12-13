@@ -38,5 +38,11 @@ public class Principal
 		j.mover(Direccion.ESTE); //en la casilla 5
 		Thread.sleep(100);
 		j.dondeEstoy();
+		j.mover(Direccion.SUR); 
+		Thread.sleep(100);
+		j.dondeEstoy();
+		j.mover(Direccion.NORTE);
+		Thread.sleep(100);
+		j.dondeEstoy();
 	}
 }
