@@ -4,13 +4,13 @@ import ull.patrones.componentes.Habitacion;
 import ull.patrones.componentes.Pared;
 import ull.patrones.componentes.Puerta;
 import ull.patrones.enumerador.Direccion;
+import ull.patrones.enumerador.TipoHabitacion;
 
 public class JuegoDelLaberinto
 {
 	private int m_NumeroHabitacionJugador;
 	private Habitacion m_habitacionActual;
 	private Laberinto m_laberinto;
-
 	public JuegoDelLaberinto(int m_NumeroHabitacionJugador)
 	{
 		this.m_NumeroHabitacionJugador = 1;
@@ -41,13 +41,14 @@ public class JuegoDelLaberinto
 	public final Laberinto crearLaberinto()
 	{
 		m_laberinto = new Laberinto();
-		Habitacion h1 = new Habitacion(m_NumeroHabitacionJugador);
+		Habitacion h1 = new Habitacion(1);
+		h1.setM_tipoHabitacion(TipoHabitacion.INICIO);
 		Habitacion h2 = new Habitacion(2);
 		Habitacion h3 = new Habitacion(3);
 		Habitacion h4 = new Habitacion(4);
 		Habitacion h5 = new Habitacion(5);
 		Habitacion h6 = new Habitacion(6);
-
+		h6.setM_tipoHabitacion(TipoHabitacion.OBJETIVO);
 		m_laberinto.anadirHabitacion(h1);
 		m_laberinto.anadirHabitacion(h2);
 		m_laberinto.anadirHabitacion(h3);

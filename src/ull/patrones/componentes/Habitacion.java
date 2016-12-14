@@ -1,15 +1,17 @@
 package ull.patrones.componentes;
 
 import ull.patrones.enumerador.Direccion;
+import ull.patrones.enumerador.TipoHabitacion;
 
 public class Habitacion implements LugarDelMapa
 {
     public static final int NUMLADOS = 4;
     private int numeroHabitacion;
     private final LugarDelMapa lados[] = new LugarDelMapa[NUMLADOS];
-    
+    private TipoHabitacion m_tipoHabitacion;
     public Habitacion(int numHabitacion)
     {
+    	setM_tipoHabitacion(TipoHabitacion.NORMAL);
     	this.numeroHabitacion = numHabitacion;
     }
     public int getNumeroHabitacion()
@@ -32,13 +34,13 @@ public class Habitacion implements LugarDelMapa
 		switch (dir)
 		{
 		case OESTE:
-			pos =0;
+			pos = 0;
 			break;
 		case NORTE:
 			pos = 1;
 			break;
 		case ESTE:
-			pos= 2;
+			pos = 2;
 			break;
 		case SUR:
 			pos = 3;
@@ -79,5 +81,13 @@ public class Habitacion implements LugarDelMapa
 	public void Entrar()
 	{
 		
+	}
+	public TipoHabitacion getM_tipoHabitacion()
+	{
+		return m_tipoHabitacion;
+	}
+	public void setM_tipoHabitacion(TipoHabitacion m_tipoHabitacion)
+	{
+		this.m_tipoHabitacion = m_tipoHabitacion;
 	}
 }
