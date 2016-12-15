@@ -160,6 +160,6 @@ public class JuegoDelLaberintoEncantado extends JuegoDelLaberinto {
 ```
 ## Objetivos Específicos
 Diseña, e implementa cada uno de los siguientes apartados:
-	1. Siguiendo las indicaciones anteriores diseña tableros de juegos para los personajes que has creado en la práctica Deberás diseñar, al menos dos tableros distintos.
-	2. Posiciona personajes de tus juegos en distintas posiciones de los tableros y generando movimientos de cada uno de ellos. Recuerda que los personajes pueden cambiar su personalidad.
-	3. Opcional: Desarrolla una versión gráfica de tus juegos.
+1. Siguiendo las indicaciones anteriores diseña tableros de juegos para los personajes que has creado en la práctica Deberás diseñar, al menos dos tableros distintos.
+2. Posiciona personajes de tus juegos en distintas posiciones de los tableros y generando movimientos de cada uno de ellos. Recuerda que los personajes pueden cambiar su personalidad.
+3. Opcional: Desarrolla una versión gráfica de tus juegos.
