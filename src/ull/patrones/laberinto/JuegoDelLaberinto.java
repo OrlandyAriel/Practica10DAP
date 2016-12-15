@@ -12,8 +12,7 @@ public class JuegoDelLaberinto
 
 	public JuegoDelLaberinto()
 	{
-		m_laberinto = crearLaberinto();
-
+		m_laberinto = fabricarLaberinto();
 	}
 
 	public final Laberinto crearLaberinto()
@@ -56,7 +55,7 @@ public class JuegoDelLaberinto
 		h1.establecerLado(Direccion.OESTE, fabricarPared());
 
 		h2.establecerLado(Direccion.NORTE, fabricarPared());
-		h2.establecerLado(Direccion.ESTE, p1);
+		h2.establecerLado(Direccion.ESTE, p5);
 		h2.establecerLado(Direccion.SUR, p2);
 		h2.establecerLado(Direccion.OESTE, p1);
 

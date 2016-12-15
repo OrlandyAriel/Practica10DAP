@@ -28,7 +28,12 @@ public class Habitacion implements LugarDelMapa
     {
 		return lados[obtenerPos(direccion)];
     }
-    private int obtenerPos(Direccion dir)
+    /**
+     * método que, según la dirección, define su posición en el array
+     * @param dir, dirección que se desea
+     * @return, dirección que se desea
+     */
+    public int obtenerPos(Direccion dir)
     {
     	int pos;
 		switch (dir)
@@ -51,10 +56,20 @@ public class Habitacion implements LugarDelMapa
 		}
 		return pos;
     }
-    
+    /**
+     * Método que, según la dirección, obtiene su posición para establecer en el array
+     * (este método llama a obtenerPos, se hace de esa manera para, en caso de herencia, el programador
+     * pueda elegir como se comporta a la hora de establecer un lugar en la habitación.
+     * @param dir, dirección que se desea
+     * @return, dirección que se desea
+     */
+    public int establecePos(Direccion dir)
+    {
+    	return obtenerPos(dir);
+    }
     public final void establecerLado(Direccion direccion, LugarDelMapa lugarDelMapa)
     {
-    	int pos = obtenerPos(direccion);
+    	int pos = establecePos(direccion);
     	lados[pos] = lugarDelMapa;
     }
     @Override
@@ -69,7 +84,7 @@ public class Habitacion implements LugarDelMapa
     @Override
     public String toString()
     {
-    	return "soy la habicación num:"+numeroHabitacion;
+    	return "Soy la habicación num:"+numeroHabitacion;
     }
    
 	@Override

@@ -22,7 +22,7 @@ public class Laberinto
 		int pos = arrayHabitaciones.indexOf(habiAux);
 		if(pos == -1)
 		{
-			pos =0;
+			pos = 0;
 			System.err.println("por defecto se devuelve la primera habiación");
 		}
 		return arrayHabitaciones.get(pos);
