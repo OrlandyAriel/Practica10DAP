@@ -15,23 +15,32 @@ public class JuegoDelLaberinto
 		m_laberinto = crearLaberinto();
 
 	}
-	public final Laberinto crearLaberinto()//LABERINTO 3X3
+
+	public final Laberinto crearLaberinto()
 	{
-		m_laberinto = new Laberinto();
-		Habitacion h1 = new Habitacion(1);
+		m_laberinto = creacionLaberinto();
+
+		return m_laberinto;
+	}
+
+	public Laberinto creacionLaberinto() // 3 x 3
+	{
+		Laberinto labNormal = fabricarLaberinto();
+		Habitacion h1 = fabricarHabitacion(1);
 		h1.setM_tipoHabitacion(TipoHabitacion.INICIO);
-		Habitacion h2 = new Habitacion(2);
-		Habitacion h3 = new Habitacion(3);
-		Habitacion h4 = new Habitacion(4);
-		Habitacion h5 = new Habitacion(5);
-		Habitacion h6 = new Habitacion(6);
+		Habitacion h2 = fabricarHabitacion(2);
+		Habitacion h3 = fabricarHabitacion(3);
+		Habitacion h4 = fabricarHabitacion(4);
+		Habitacion h5 = fabricarHabitacion(5);
+		Habitacion h6 = fabricarHabitacion(6);
 		h6.setM_tipoHabitacion(TipoHabitacion.OBJETIVO);
-		m_laberinto.anadirHabitacion(h1);
-		m_laberinto.anadirHabitacion(h2);
-		m_laberinto.anadirHabitacion(h3);
-		m_laberinto.anadirHabitacion(h4);
-		m_laberinto.anadirHabitacion(h5);
-		m_laberinto.anadirHabitacion(h6);
+		
+		labNormal.anadirHabitacion(h1);
+		labNormal.anadirHabitacion(h2);
+		labNormal.anadirHabitacion(h3);
+		labNormal.anadirHabitacion(h4);
+		labNormal.anadirHabitacion(h5);
+		labNormal.anadirHabitacion(h6);
 
 		Puerta p1 = fabricarPuerta(h1, h2, false);
 		Puerta p2 = fabricarPuerta(h1, h4, true);
@@ -70,7 +79,8 @@ public class JuegoDelLaberinto
 		h6.establecerLado(Direccion.ESTE, fabricarPared());
 		h6.establecerLado(Direccion.SUR, fabricarPared());
 		h6.establecerLado(Direccion.OESTE, p6);
-		return m_laberinto;
+		
+		return labNormal;
 	}
 
 	// Métodos de fabricación
