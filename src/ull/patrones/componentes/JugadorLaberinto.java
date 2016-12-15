@@ -7,17 +7,37 @@ public class JugadorLaberinto
 { //ATRIBUTOS
 	private int m_habitacionInicial;
 	private String m_nombreJugador;
-	private Laberinto m_laberinto;
 	private Habitacion m_habitacion;
 	//CONSTRUCTOR
 	public JugadorLaberinto(int numHabitaconInicial, String nombreJugador, Laberinto laberinto)
 	{
 		m_habitacionInicial = numHabitaconInicial;
 		m_nombreJugador = nombreJugador;
-		m_laberinto = laberinto;
+		m_habitacion = laberinto.numeroDeHabitacion(m_habitacionInicial);
 	}
 	public void mover(Direccion direccionMovimiento)
 	{
-		
+		if(m_habitacion.obtenerLado(direccionMovimiento) != null)
+		{
+			if(m_habitacion.obtenerLado(direccionMovimiento).getClass() == Puerta.class)
+			{
+				Puerta tPuerta = (Puerta) m_habitacion.obtenerLado(direccionMovimiento);
+				tPuerta.Entrar();
+				if(tPuerta.obtenerEstadoPuerta())
+				{
+					m_habitacion = (Habitacion) tPuerta.otroLadoDe(m_habitacion);
+				}
+			}
+			else if(m_habitacion.obtenerLado(direccionMovimiento).getClass() == Pared.class)
+			{
+				Pared pared = (Pared)m_habitacion.obtenerLado(direccionMovimiento);
+				pared.Entrar();
+			}
+		}
+		m_habitacion.Entrar();
+	}
+	public void dondeEstoy()
+	{
+		System.out.println(m_nombreJugador+", está en la habitación número:"+m_habitacion.getNumeroHabitacion());
 	}
 }

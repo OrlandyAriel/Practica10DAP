@@ -25,7 +25,6 @@ public class Laberinto
 			pos =0;
 			System.err.println("por defecto se devuelve la primera habiación");
 		}
-		
 		return arrayHabitaciones.get(pos);
 	}
 }

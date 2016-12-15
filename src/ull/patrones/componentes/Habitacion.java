@@ -71,16 +71,14 @@ public class Habitacion implements LugarDelMapa
     {
     	return "soy la habicación num:"+numeroHabitacion;
     }
-    public void Entrar(Direccion dir)
-    {
-    	int pos = obtenerPos(dir);
-    	LugarDelMapa puede = lados[pos];
-    	puede.Entrar();
-    }
+   
 	@Override
 	public void Entrar()
 	{
-		
+		if(m_tipoHabitacion == TipoHabitacion.OBJETIVO)
+		{
+			System.out.println("FELICIDADES, JUEGO TERMINADO");
+		}
 	}
 	public TipoHabitacion getM_tipoHabitacion()
 	{

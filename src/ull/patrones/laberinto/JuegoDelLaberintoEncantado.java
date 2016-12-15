@@ -9,7 +9,6 @@ public class JuegoDelLaberintoEncantado extends JuegoDelLaberinto
 {
 	public JuegoDelLaberintoEncantado()
 	{
-		super(1);
 	}
 
 	public Habitacion fabricarHabitacion(int n)
