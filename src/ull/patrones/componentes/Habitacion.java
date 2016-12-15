@@ -92,7 +92,7 @@ public class Habitacion implements LugarDelMapa
 	{
 		if(m_tipoHabitacion == TipoHabitacion.OBJETIVO)
 		{
-			System.out.println("FELICIDADES, JUEGO TERMINADO");
+			System.out.println("LLEGO AL OBJETIVO");
 		}
 	}
 	public TipoHabitacion getM_tipoHabitacion()

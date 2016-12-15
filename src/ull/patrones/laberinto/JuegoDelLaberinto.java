@@ -6,7 +6,7 @@ import ull.patrones.componentes.Puerta;
 import ull.patrones.enumerador.Direccion;
 import ull.patrones.enumerador.TipoHabitacion;
 
-public class JuegoDelLaberinto
+public class JuegoDelLaberinto implements Juego
 {
 	private Laberinto m_laberinto;
 
@@ -17,12 +17,12 @@ public class JuegoDelLaberinto
 
 	public final Laberinto crearLaberinto()
 	{
-		m_laberinto = creacionLaberinto();
+		m_laberinto = creacionLaberintoInterno();
 
 		return m_laberinto;
 	}
 
-	public Laberinto creacionLaberinto() // 3 x 3
+	public Laberinto creacionLaberintoInterno() // 3 x 3
 	{
 		Laberinto labNormal = fabricarLaberinto();
 		Habitacion h1 = fabricarHabitacion(1);

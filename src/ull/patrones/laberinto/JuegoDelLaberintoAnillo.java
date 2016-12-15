@@ -13,7 +13,7 @@ public class JuegoDelLaberintoAnillo extends JuegoDelLaberinto
 	}
 
 	@Override
-	public Laberinto creacionLaberinto()
+	public Laberinto creacionLaberintoInterno()
 	{
 
 		Laberinto labAnillo = fabricarLaberinto();

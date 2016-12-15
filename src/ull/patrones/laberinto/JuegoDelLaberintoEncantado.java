@@ -12,7 +12,8 @@ public class JuegoDelLaberintoEncantado extends JuegoDelLaberinto
 	{
 		super();
 	}
-	public Laberinto creacionLaberinto() // 3 x 3
+	@Override
+	public Laberinto  creacionLaberintoInterno() // 3 x 3
 	{
 		Laberinto labNormal = fabricarLaberinto();
 		Habitacion h1 = fabricarHabitacion(1);
@@ -45,8 +46,8 @@ public class JuegoDelLaberintoEncantado extends JuegoDelLaberinto
 		h1.establecerLado(Direccion.OESTE, fabricarPared());
 
 		h2.establecerLado(Direccion.NORTE, fabricarPared());
-		h2.establecerLado(Direccion.ESTE, p1);
-		h2.establecerLado(Direccion.SUR, p2);
+		h2.establecerLado(Direccion.ESTE, p5);
+		h2.establecerLado(Direccion.SUR, p4);
 		h2.establecerLado(Direccion.OESTE, p1);
 
 		h3.establecerLado(Direccion.NORTE, fabricarPared());

@@ -26,7 +26,7 @@ public class HabitacionEncantada extends Habitacion
 			pos = 1;
 			break;
 		default:
-			pos = 3;
+			pos = 0;
 			break;
 		}
 		return pos;

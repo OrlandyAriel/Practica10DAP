@@ -46,7 +46,7 @@ public class Principal
 	}
 	public static void main(String[] args) throws InterruptedException
 	{
-		JuegoDelLaberinto jg = new JuegoDelLaberinto();
+		JuegoDelLaberinto jg = new JuegoDelLaberintoEncantado();
 		Laberinto lab = jg.crearLaberinto();
 		JugadorLaberinto player = new JugadorLaberinto(1, "Landy", lab);
 		
