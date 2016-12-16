@@ -2,18 +2,27 @@ package ull.patrones.componentes;
 
 import ull.patrones.enumerador.Direccion;
 import ull.patrones.enumerador.TipoHabitacion;
-
+/**
+ * Clase que representa una habitación.
+ * @author Orlandy Ariel Sánchez A.
+ *
+ */
 public class Habitacion implements LugarDelMapa
 {
     public static final int NUMLADOS = 4;
     private int numeroHabitacion;
     private final LugarDelMapa lados[] = new LugarDelMapa[NUMLADOS];
     private TipoHabitacion m_tipoHabitacion;
+    /**
+     * Construcotr.
+     * @param numHabitacion, número para identificar la habitación.
+     */
     public Habitacion(int numHabitacion)
     {
     	setM_tipoHabitacion(TipoHabitacion.NORMAL);
     	this.numeroHabitacion = numHabitacion;
     }
+   
     public int getNumeroHabitacion()
 	{
 		return numeroHabitacion;
@@ -23,7 +32,11 @@ public class Habitacion implements LugarDelMapa
 	{
 		return lados;
 	}
-
+	/**
+	 * Método que, partiendo de una dirección, devuelve lo que se encuentra en esa dirección.
+	 * @param direccion
+	 * @return
+	 */
     public final LugarDelMapa obtenerLado(Direccion direccion)
     {
 		return lados[obtenerPos(direccion)];
@@ -67,6 +80,11 @@ public class Habitacion implements LugarDelMapa
     {
     	return obtenerPos(dir);
     }
+    /**
+     * Método para establecer a quíen tendrá en los lados esta habitación.
+     * @param direccion
+     * @param lugarDelMapa
+     */
     public final void establecerLado(Direccion direccion, LugarDelMapa lugarDelMapa)
     {
     	int pos = establecePos(direccion);

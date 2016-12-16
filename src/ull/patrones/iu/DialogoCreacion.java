@@ -16,7 +16,12 @@ import ull.patrones.laberinto.Juego;
 import ull.patrones.laberinto.JuegoDelLaberinto;
 import ull.patrones.laberinto.JuegoDelLaberintoAnillo;
 import ull.patrones.laberinto.JuegoDelLaberintoEncantado;
-
+/**
+ * Clase para recoger los datos, partiendo de estos 
+ * se configura el laberinto.
+ * @author Orlandy Ariel Sánchez A.
+ *
+ */
 public class DialogoCreacion extends JDialog
 {
 	// ATRIBUTOS
@@ -88,7 +93,9 @@ public class DialogoCreacion extends JDialog
 			panelCentro.add(m_radiolabAnillo);
 			panelCentro.add(m_radiolabEncantado);
 		}
-
+		/**
+		 * Método que configura el panel que se mostrará en la parte superior.
+		 */
 		private void initPanelArriba()
 		{
 			
@@ -103,7 +110,9 @@ public class DialogoCreacion extends JDialog
 			panelArriba.add(mLabNumUsuarios);
 			panelArriba.add(mTxtNumUsuarios);
 		}
-		
+		/**
+		 * Método que crea y configura el dialogo.
+		 */
 		private void initComponent()
 		{
 			
@@ -130,6 +139,9 @@ public class DialogoCreacion extends JDialog
 			this.add(panelCentro,BorderLayout.CENTER);
 			this.add(mBtnEnviar, BorderLayout.SOUTH);
 		}
+		/**
+		 * Método que recoge los datos del formulario y crea la ventana con estos datos.
+		 */
 		private void recogerDatosPerformed()
 		{
 			m_numUsuarios = Integer.parseInt(mTxtNumUsuarios.getText());

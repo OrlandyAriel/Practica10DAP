@@ -5,7 +5,12 @@ import ull.patrones.componentes.HabitacionEncantada;
 import ull.patrones.componentes.Puerta;
 import ull.patrones.enumerador.Direccion;
 import ull.patrones.enumerador.TipoHabitacion;
-
+/**
+ * Clase que representa un laberinto encantado, de manera que
+ * si el jugador se mueve a un lado en este laberinto irá al lado contrario.
+ * @author Orlandy Ariel Sánchez A.
+ *
+ */
 public class JuegoDelLaberintoEncantado extends JuegoDelLaberinto
 {
 	public JuegoDelLaberintoEncantado()
@@ -72,14 +77,13 @@ public class JuegoDelLaberintoEncantado extends JuegoDelLaberinto
 		
 		return labNormal;
 	}
+	/**
+	 * Método que se sobreescribe para crear habitaciones encantadas
+	 */
+	
 	public Habitacion fabricarHabitacion(int n)
 	{
 		return new HabitacionEncantada(n);
 	}
 
-	public Puerta fabricarPuerta(Habitacion h1, Habitacion h2)
-	{
-		return new PuertaQueNecesitaHechizo(h1, h2);
-	}
-	
 }

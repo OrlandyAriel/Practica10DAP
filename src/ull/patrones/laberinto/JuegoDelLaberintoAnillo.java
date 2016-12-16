@@ -4,7 +4,11 @@ import ull.patrones.componentes.Habitacion;
 import ull.patrones.componentes.Puerta;
 import ull.patrones.enumerador.Direccion;
 import ull.patrones.enumerador.TipoHabitacion;
-
+/**
+ * Clase que representa un laberinto en forma de anillo
+ * @author Orlandy Ariel Sánchez A.
+ *
+ */
 public class JuegoDelLaberintoAnillo extends JuegoDelLaberinto
 {
 	public JuegoDelLaberintoAnillo()
@@ -13,7 +17,7 @@ public class JuegoDelLaberintoAnillo extends JuegoDelLaberinto
 	}
 
 	@Override
-	public Laberinto creacionLaberintoInterno()
+	public Laberinto creacionLaberintoInterno()//3x5
 	{
 
 		Laberinto labAnillo = fabricarLaberinto();

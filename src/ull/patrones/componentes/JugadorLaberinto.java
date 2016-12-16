@@ -16,7 +16,10 @@ public class JugadorLaberinto
 		m_nombreJugador = nombreJugador;
 		m_habitacion = laberinto.numeroDeHabitacion(m_habitacionInicial);
 	}
-
+	/**
+	 * Método para mover al jugador dentro del laberinto donde se encuentra.
+	 * @param direccionMovimiento
+	 */
 	public void mover(Direccion direccionMovimiento)
 	{
 		if (m_habitacion.obtenerLado(direccionMovimiento) != null)
@@ -50,7 +53,10 @@ public class JugadorLaberinto
 		else
 			return false;
 	}
-
+	/**
+	 * Método para saber en que habitación está el jugador
+	 * @return
+	 */
 	public String dondeEstoy()
 	{
 		return m_nombreJugador + ", está en la habitación número:" + m_habitacion.getNumeroHabitacion();

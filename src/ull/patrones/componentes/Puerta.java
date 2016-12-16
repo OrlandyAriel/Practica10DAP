@@ -1,5 +1,9 @@
 package ull.patrones.componentes;
-
+/**
+ * Clase que represnta una puerta que conecta 2 habitaciones
+ * @author Orlandy Ariel Sánchez A.
+ *
+ */
 public class Puerta implements LugarDelMapa
 {
 	private Habitacion habitacion1;
@@ -13,10 +17,19 @@ public class Puerta implements LugarDelMapa
 		this.habitacion2 = habitacion2;
 		estaAbierta = abierta;
 	}
+	/**
+	 * Método para saber si la puerta está cerrada o no.
+	 * @return
+	 */
 	public boolean obtenerEstadoPuerta()
 	{
 		return estaAbierta;
 	}
+	/**
+	 * Método para, dependiendo del lado en que se encuentre, obtener la otra habitación.
+	 * @param habitacion, habitación desde donde se llama a la puerta.
+	 * @return, devuelve la otra habitación con la que está conectada.
+	 */
 	public final Habitacion otroLadoDe(Habitacion habitacion)
 	{
 		if(habitacion.equals(habitacion1))

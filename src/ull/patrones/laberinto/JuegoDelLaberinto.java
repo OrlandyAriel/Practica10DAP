@@ -5,24 +5,37 @@ import ull.patrones.componentes.Pared;
 import ull.patrones.componentes.Puerta;
 import ull.patrones.enumerador.Direccion;
 import ull.patrones.enumerador.TipoHabitacion;
-
+/**
+ * Clase que represetna un laberinto Normal de 3x2
+ * @author Orlandy Ariel Sánchez A.
+ *
+ */
 public class JuegoDelLaberinto implements Juego
 {
 	private Laberinto m_laberinto;
-
+	/**
+	 * Constructor
+	 */
 	public JuegoDelLaberinto()
 	{
 		m_laberinto = fabricarLaberinto();
 	}
-
+	/**
+	 * Método que permite crear un laberinto
+	 */
 	public final Laberinto crearLaberinto()
 	{
 		m_laberinto = creacionLaberintoInterno();
 
 		return m_laberinto;
 	}
-
-	public Laberinto creacionLaberintoInterno() // 3 x 3
+	/**
+	 * Método de creación interna, dado que el método crearLaberinto tiene
+	 * como modificador final los laberintos que hereden no pueden sobreescribirlo
+	 * por tanto se proporciona este método para dicho fin
+	 * @return
+	 */
+	public Laberinto creacionLaberintoInterno() // 3 x 2
 	{
 		Laberinto labNormal = fabricarLaberinto();
 		Habitacion h1 = fabricarHabitacion(1);
