@@ -35,7 +35,8 @@ public class DialogoCreacion extends JDialog
 
 		// CONSTRUCTOR/ES
 		public DialogoCreacion()
-		{
+		{	
+			m_juegoLaberinto = new JuegoDelLaberinto();
 			initPanelCentro();
 			initPanelArriba();
 			initComponent();

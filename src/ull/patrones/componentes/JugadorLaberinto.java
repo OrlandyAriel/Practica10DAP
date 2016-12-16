@@ -37,6 +37,10 @@ public class JugadorLaberinto
 		}
 		m_habitacion.Entrar();
 	}
+	public String getNombre()
+	{
+		return m_nombreJugador;
+	}
 
 	@Override
 	public boolean equals(Object obj)
